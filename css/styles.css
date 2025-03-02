@@ -574,13 +574,19 @@ footer .logo {
   margin-left: 80px;
 }
 
-.sub-label {
+.sub-text {
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
   display: block;
+}
+
+.footer-form {
+  display: flex;
+  gap: 24px;
 }
 
 .sub-input {
@@ -593,26 +599,28 @@ footer .logo {
   background-color: transparent;
   padding: 8px 16px;
   color: #fff;
-}
-
-.sub-input::placeholder {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
+}
+
+.sub-input::placeholder {
   color: #fff;
 }
 
 .sub-btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   font-weight: 500;
-
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
@@ -643,9 +651,6 @@ footer .logo {
   top: 0;
   left: 0;
   pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   visibility: hidden;
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
@@ -666,8 +671,12 @@ footer .logo {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text {
@@ -677,7 +686,10 @@ footer .logo {
   text-align: center;
   color: #2e2f42;
   margin-bottom: 16px;
-  margin-top: 48px;
+}
+
+.form-wrapper {
+  margin-bottom: 8px;
 }
 
 .close-btn {
@@ -692,20 +704,22 @@ footer .logo {
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   right: 24px;
+  top: 24px;
+  cursor: pointer;
 }
 
 .icon-close {
-  /* stroke: #2e2f42;
-  fill: #e7e9fc; */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:focus,
 .close-btn:hover {
   background-color: #404bbf;
   fill: #fff;
+  border: none;
 }
 
 .form-label {
@@ -720,21 +734,22 @@ footer .logo {
 .form-input {
   max-width: 408px;
   width: 100%;
-  outline: none;
+  outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   max-width: 360px;
   height: 40px;
   padding: 0;
-  margin-bottom: 8px;
   padding-left: 38px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
 }
 
 .icon-input {
   position: absolute;
   left: 16px;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -749,6 +764,10 @@ footer .logo {
   border: 1px solid #4d5ae5;
 }
 
+.whatever-wrapper {
+  margin-bottom: 8px;
+}
+
 .input-wrapper {
   position: relative;
   max-width: 360px;
@@ -760,28 +779,30 @@ footer .logo {
   outline: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
-  max-height: 120px;
+  width: 100%;
+  height: 120px;
   display: block;
   resize: none;
   padding: 8px 16px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-comment::placeholder {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
 }
 
 .form-comment:hover,
 .form-comment:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .textarea-wrapper {
   margin-bottom: 16px;
+}
+
+.modal-checkbox {
+  margin-bottom: 24px;
 }
 
 .custom-checkbox {
@@ -794,6 +815,9 @@ footer .logo {
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .label-checkbox .custom-checkbox {
@@ -817,10 +841,12 @@ footer .logo {
 }
 
 .form-submit-btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
-  max-height: 56px;
+  min-width: 169px;
+  height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
   display: block;
@@ -829,9 +855,10 @@ footer .logo {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  margin: 24px auto 0;
+  margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
+  cursor: pointer;
 }
 
 .form-submit-btn:hover,
