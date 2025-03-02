@@ -557,6 +557,81 @@ footer .logo {
   fill: #f4f4fd;
 }
 
+.subscribe-wrapper {
+  display: flex;
+  margin-left: 80px;
+  height: 100%;
+}
+
+.sub-icon {
+  fill: #fff;
+  margin-left: 16px;
+}
+
+.footer-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-left: 80px;
+}
+
+.sub-label {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.sub-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  outline: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  padding: 8px 16px;
+  color: #fff;
+}
+
+.sub-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.sub-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sub-btn:hover,
+.sub-btn:focus {
+  background-color: #404bbf;
+}
+
+.footer-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-left: 24px;
+}
+
 /*#endregion footer*/
 
 .backdrop {
